@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料正能量-黑料正能量事件观察_吃瓜爆料与正能量内容</title>
+<meta name="description" content="黑料正能量是一个观察网络热点事件与正向内容表达的首页，围绕黑料正能量话题呈现事件梳理、观点辨析、内容边界与读者参与路径，帮助访问者理解爆料语境下的真实信息与正向价值。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b2b2f'/%3E%3Cpath d='M20 40c4-12 20-12 24 0' stroke='%23ffd166' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='23' r='6' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1b2b2f;
+  --ink-soft:#3c5156;
+  --paper:#f7f3ea;
+  --paper-2:#fffdf7;
+  --line:#ddd3c2;
+  --accent:#e2553b;
+  --accent-soft:#fbe2d9;
+  --gold:#f0b429;
+  --deep:#122024;
+  --radius:16px;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+/* ---------- header ---------- */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,243,234,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-row{
+  display:flex;align-items:center;gap:24px;
+  min-height:68px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;font-size:19px;letter-spacing:.5px;
+  color:var(--deep);
+  white-space:nowrap;
+}
+.brand .mark{
+  width:34px;height:34px;flex:0 0 34px;
+  border-radius:10px;
+  background:var(--deep);
+  display:grid;place-items:center;
+}
+.brand .mark svg{width:22px;height:22px;}
+nav.main{margin-left:auto;}
+nav.main ul{
+  display:flex;gap:22px;list-style:none;margin:0;padding:0;
+  font-size:14.5px;font-weight:600;color:var(--ink-soft);
+}
+nav.main a{padding:6px 2px;border-bottom:2px solid transparent;transition:.2s;}
+nav.main a:hover,nav.main a:focus-visible{color:var(--accent);border-bottom-color:var(--accent);}
+.nav-cta{
+  background:var(--accent);color:#fff;font-size:14px;font-weight:700;
+  padding:9px 18px;border-radius:999px;white-space:nowrap;
+  transition:.2s;
+}
+.nav-cta:hover{background:#c8462f;}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(900px 380px at 88% -10%,rgba(240,180,41,.22),transparent 70%),
+    radial-gradient(700px 340px at 6% 110%,rgba(226,85,59,.12),transparent 70%);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.25fr .95fr;gap:48px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:700;letter-spacing:1.5px;
+  color:var(--accent);
+  background:var(--accent-soft);
+  padding:5px 14px;border-radius:999px;
+  margin-bottom:22px;
+}
+h1{
+  font-size:clamp(34px,4.6vw,54px);
+  line-height:1.18;
+  font-weight:900;
+  letter-spacing:1px;
+  margin:0 0 20px;
+  color:var(--deep);
+}
+.hero p.lead{
+  font-size:17px;color:var(--ink-soft);
+  max-width:36em;margin:0 0 30px;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--deep);color:#fff;
+  font-weight:700;font-size:15px;
+  padding:13px 26px;border-radius:999px;
+  transition:.2s;
+}
+.btn-primary:hover{background:var(--accent);}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  font-weight:700;font-size:15px;color:var(--ink);
+  padding:12px 22px;border-radius:999px;
+  border:1.5px solid var(--line);background:var(--paper-2);
+  transition:.2s;
+}
+.btn-ghost:hover{border-color:var(--ink);}
+.hero-panel{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 18px 40px -28px rgba(27,43,47,.5);
+}
+.hero-panel h2{
+  font-size:14px;letter-spacing:1px;color:var(--ink-soft);
+  margin:0 0 16px;font-weight:700;
+}
+.topic-list{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+.topic-list li{
+  display:flex;gap:12px;align-items:flex-start;
+  font-size:14.5px;color:var(--ink-soft);
+}
+.dot{
+  flex:0 0 8px;width:8px;height:8px;border-radius:50%;
+  background:var(--gold);margin-top:8px;
+}
+.topic-list b{color:var(--deep);font-weight:800;}
+
+/* ---------- section shell ---------- */
+section.block{padding:64px 0;}
+.sec-head{max-width:640px;margin-bottom:36px;}
+.sec-tag{
+  font-size:12.5px;font-weight:800;letter-spacing:2px;color:var(--accent);
+  text-transform:uppercase;
+}
+.sec-head h2{
+  font-size:clamp(24px,3vw,32px);
+  font-weight:900;letter-spacing:.5px;
+  margin:10px 0 12px;color:var(--deep);
+}
+.sec-head p{margin:0;color:var(--ink-soft);font-size:15.5px;}
+
+/* ---------- cards ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.card{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px 24px 24px;
+  display:flex;flex-direction:column;gap:12px;
+  transition:.25s;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 42px -30px rgba(27,43,47,.55);border-color:#c9bca6;}
+.card .ico{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--accent-soft);
+  display:grid;place-items:center;
+  color:var(--accent);
+}
+.card .ico svg{width:24px;height:24px;}
+.card h3{font-size:17.5px;margin:0;font-weight:800;color:var(--deep);}
+.card p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+
+/* ---------- split feature ---------- */
+.split{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+}
+.split h2{
+  font-size:clamp(24px,3vw,32px);font-weight:900;margin:10px 0 16px;color:var(--deep);letter-spacing:.5px;
+}
+.split p{color:var(--ink-soft);font-size:15.5px;margin:0 0 16px;}
+.checklist{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:12px;}
+.checklist li{
+  display:flex;gap:11px;align-items:flex-start;
+  font-size:14.5px;color:var(--ink-soft);
+}
+.check{
+  flex:0 0 20px;width:20px;height:20px;border-radius:50%;
+  background:var(--deep);color:#fff;display:grid;place-items:center;
+  margin-top:2px;
+}
+.check svg{width:12px;height:12px;}
+.visual{
+  background:linear-gradient(160deg,#16282c,#22393d);
+  border-radius:22px;
+  padding:28px;
+  color:#e9e2d3;
+  position:relative;
+  overflow:hidden;
+}
+.visual::after{
+  content:"";position:absolute;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(240,180,41,.45),transparent 70%);
+  top:-70px;right:-60px;
+}
+.visual h3{
+  font-size:15px;letter-spacing:1px;margin:0 0 20px;color:#f0b429;font-weight:800;
+}
+.bars{display:grid;gap:16px;position:relative;z-index:1;}
+.bar-item{font-size:13.5px;}
+.bar-item .row{display:flex;justify-content:space-between;margin-bottom:7px;color:#cfc7b6;}
+.bar-item .row b{color:#fff;font-weight:700;}
+.track{height:8px;border-radius:999px;background:rgba(255,255,255,.13);overflow:hidden;}
+.fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#f0b429,#e2553b);}
+
+/* ---------- filter / feed ---------- */
+.feed-tools{
+  display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  margin-bottom:24px;
+}
+.chip{
+  border:1.5px solid var(--line);
+  background:var(--paper-2);
+  color:var(--ink-soft);
+  font-size:13.5px;font-weight:700;
+  padding:8px 18px;border-radius:999px;
+  cursor:pointer;transition:.2s;font-family:inherit;
+}
+.chip:hover{border-color:#b9ab94;}
+.chip.active{background:var(--deep);color:#fff;border-color:var(--deep);}
+.search-box{
+  margin-left:auto;display:flex;align-items:center;gap:8px;
+  background:var(--paper-2);border:1.5px solid var(--line);
+  border-radius:999px;padding:7px 16px;
+}
+.search-box svg{width:16px;height:16px;color:var(--ink-soft);flex:0 0 16px;}
+.search-box input{
+  border:none;background:transparent;outline:none;
+  font-size:14px;font-family:inherit;color:var(--ink);width:150px;
+}
+.feed{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.post{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.post .meta{
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+  font-size:12.5px;font-weight:700;color:var(--accent);
+}
+.post .meta span.tag{background:var(--accent-soft);padding:3px 10px;border-radius:999px;}
+.post .meta time{color:#9a8f7c;font-weight:600;}
+.post h3{font-size:17px;margin:0;font-weight:800;color:var(--deep);line-height:1.5;}
+.post p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+.post .more{
+  margin-top:4px;font-size:13.5px;font-weight:800;color:var(--deep);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.post .more:hover{color:var(--accent);}
+.post .more svg{width:14px;height:14px;}
+.empty-note{
+  grid-column:1/-1;text-align:center;color:#9a8f7c;font-size:14.5px;
+  padding:32px;border:1.5px dashed var(--line);border-radius:var(--radius);
+}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:14px;max-width:820px;}
+details.q{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:14px;padding:0 22px;
+}
+details.q summary{
+  cursor:pointer;list-style:none;
+  padding:18px 0;font-weight:800;font-size:15.5px;color:var(--deep);
+  display:flex;justify-content:space-between;gap:16px;align-items:center;
+}
+details.q summary::-webkit-details-marker{display:none;}
+details.q summary::after{
+  content:"+";font-size:20px;font-weight:700;color:var(--accent);line-height:1;
+}
+details.q[open] summary::after{content:"–";}
+details.q p{margin:0 0 20px;font-size:14.5px;color:var(--ink-soft);}
+
+/* ---------- download strip ---------- */
+.dl-strip{
+  background:var(--deep);color:#f2ece0;border-radius:24px;
+  padding:44px 40px;
+  display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;
+  position:relative;overflow:hidden;
+}
+.dl-strip::before{
+  content:"";position:absolute;width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(240,180,41,.3),transparent 70%);
+  right:-80px;bottom:-120px;
+}
+.dl-strip h2{font-size:24px;margin:0 0 8px;font-weight:900;letter-spacing:.5px;position:relative;}
+.dl-strip p{margin:0;font-size:14.5px;color:#c2b9a8;max-width:40em;position:relative;}
+.dl-btn{
+  position:relative;
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--gold);color:#26200f;
+  font-weight:800;font-size:15px;
+  padding:14px 30px;border-radius:999px;
+  pointer-events:none;
+}
+.dl-btn svg{width:18px;height:18px;}
+
+/* ---------- footer ---------- */
+footer.site{
+  border-top:1px solid var(--line);
+  padding:44px 0 40px;
+  background:var(--paper);
+}
+.foot-grid{
+  display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;
+}
+.foot-brand{max-width:340px;}
+.foot-brand .brand{font-size:17px;margin-bottom:12px;}
+.foot-brand p{margin:0;font-size:13.5px;color:#8d8271;line-height:1.8;}
+.foot-links{display:flex;gap:56px;flex-wrap:wrap;}
+.foot-links h4{font-size:13px;letter-spacing:1px;color:#8d8271;margin:0 0 12px;font-weight:800;}
+.foot-links ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:14px;color:var(--ink-soft);font-weight:600;}
+.foot-links a:hover{color:var(--accent);}
+.copy{
+  margin-top:36px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:13px;color:#9a8f7c;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:940px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;}
+  .split{grid-template-columns:1fr;gap:32px;}
+  .grid-3{grid-template-columns:1fr 1fr;}
+  .feed{grid-template-columns:1fr;}
+  nav.main{display:none;}
+  .nav-cta{margin-left:auto;}
+}
+@media (max-width:640px){
+  .wrap{padding:0 18px;}
+  .hero{padding:44px 0 40px;}
+  h1{letter-spacing:.5px;}
+  .grid-3{grid-template-columns:1fr;}
+  section.block{padding:48px 0;}
+  .search-box{margin-left:0;width:100%;}
+  .search-box input{width:100%;}
+  .dl-strip{padding:32px 24px;border-radius:18px;}
+  .foot-links{gap:32px;}
+  .brand{font-size:17px;}
+  .nav-row{gap:14px;}
+  .nav-cta{padding:8px 15px;font-size:13px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="黑料正能量 首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 42c5-16 23-16 28 0" stroke="#f0b429" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="32" cy="22" r="7" fill="#e2553b"/>
+        </svg>
+      </span>
+      黑料正能量
+    </a>
+    <nav class="main" aria-label="主导航">
+      <ul>
+        <li><a href="#observe">事件观察</a></li>
+        <li><a href="#feed">今日看点</a></li>
+        <li><a href="#boundary">内容边界</a></li>
+        <li><a href="#faq">常见疑问</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#feed">进入看点</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">● 热点观察 · 正向表达</span>
+        <h1>黑料正能量</h1>
+        <p class="lead">把网络爆料里的碎片信息放回语境中看：哪些是确有其事，哪些只是情绪放大，又有哪些反转之后留下了值得记住的正向一面。黑料正能量关注的不是猎奇本身，而是热闹散去后，事实与态度各自站在哪里。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#feed">
+            查看今日看点
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn-ghost" href="#boundary">先看内容边界</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="本期观察要点">
+        <h2>本期观察要点</h2>
+        <ul class="topic-list">
+          <li><span class="dot" aria-hidden="true"></span><span><b>先核时间线</b>——爆料出现的时间、当事人回应的时间，往往决定一条黑料正能量内容是否站得住。</span></li>
+          <li><span class="dot" aria-hidden="true"></span><span><b>再看证据链</b>——截图、录音与转述的可信度并不相同，页面会分别标注来源性质。</span></li>
+          <li><span class="dot" aria-hidden="true"></span><span><b>最后谈正向</b>——反转、道歉与补救，同样是黑料正能量值得记录的结局。</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 事件观察：三栏 -->
+  <section class="block" id="observe">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Observe</span>
+        <h2>黑料正能量怎么读一条爆料</h2>
+        <p>同一个事件，从爆料者、被爆料者和旁观者三个角度看，结论可能完全不同。下面三栏对应三种阅读姿势。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>溯源：这条黑料从哪来</h3>
+          <p>先确认首发平台与首发时间，再看是否经过二次剪辑或拼接。很多所谓的黑料正能量内容，问题就出在源头被模糊处理。</p>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V9m5 10V5m5 14v-7m5 7V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+          <h3>对照：不同说法差在哪</h3>
+          <p>把当事人回应、平台处置与第三方说法并排放，差异点往往就是关键事实。黑料正能量不替任何一方下结论，只把差别摆清楚。</p>
+        </article>
+        <article class="card">
+          <span class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.6-7-10a7 7 0 0114 0c0 5.4-7 10-7 10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.6" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>落点：热闹之后留下什么</h3>
+          <p>道歉是否具体、补救是否到位、同类问题有没有被修正，这些细节决定了黑料正能量话题能否真正收尾，而不是反复翻炒。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 内容边界 split -->
+  <section class="block" id="boundary" style="background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap split">
+      <div>
+        <span class="sec-tag">Boundary</span>
+        <h2>内容边界：能讨论什么，不碰什么</h2>
+        <p>黑料正能量讨论的是公开传播的事件与观点，而不是私人住址、身份证号、家庭成员等与事件无关的个人信息。以下四条是本页采用的取舍口径。</p>
+        <ul class="checklist">
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>只引用公开渠道可查的表述，并注明来源性质。</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>对尚未证实的说法使用“待核实”标注，不作定性。</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>隐去与事件无关的未成年人信息与联系方式。</li>
+          <li><span class="check" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>反转后及时更新结论，保留原判断的修改痕迹。</li>
+        </ul>
+      </div>
+      <div class="visual" aria-label="内容结构示意">
+        <h3>一条内容的构成比例</h3>
+        <div class="bars">
+          <div class="bar-item">
+            <div class="row"><span>事实与时间线</span><b>45%</b></div>
+            <div class="track"><div class="fill" style="width:45%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="row"><span>各方回应</span><b>30%</b></div>
+            <div class="track"><div class="fill" style="width:30%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="row"><span>观点与正向落点</span><b>25%</b></div>
+            <div class="track"><div class="fill" style="width:25%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 今日看点 feed -->
+  <section class="block" id="feed">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Feed</span>
+        <h2>今日看点：黑料正能量内容速览</h2>
+        <p>按主题筛选或直接搜索标题关键词，列表会即时收敛到你关心的那一条。</p>
+      </div>
+
+      <div class="feed-tools">
+        <button class="chip active" type="button" data-filter="all">全部</button>
+        <button class="chip" type="button" data-filter="反转">反转</button>
+        <button class="chip" type="button" data-filter="回应">回应</button>
+        <button class="chip" type="button" data-filter="边界">边界</button>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="feedSearch" placeholder="搜索看点标题" aria-label="搜索看点标题">
+        </label>
+      </div>
+
+      <div class="feed" id="feedList">
+        <article class="post" data-cat="反转">
+          <div class="meta"><span class="tag">反转</span><time>时间线更新</time></div>
+          <h3>被剪掉的后半段：一条爆料的完整版本</h3>
+          <p>原始视频完整播出后，此前流传的片段与事实出现偏差。黑料正能量建议先看完整版，再判断当事双方的说法是否对得上。</p>
+          <a class="more" href="#observe">按阅读方法拆解 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="post" data-cat="回应">
+          <div class="meta"><span class="tag">回应</span><time>公开说明</time></div>
+          <h3>当事人回应之后，讨论该往哪里走</h3>
+          <p>回应不是终点。需要看说明是否覆盖了争议核心，是否给出可核对的时间与细节。黑料正能量把回应原文与争议点逐条并列。</p>
+          <a class="more" href="#boundary">对照边界口径 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="post" data-cat="边界">
+          <div class="meta"><span class="tag">边界</span><time>取舍说明</time></div>
+          <h3>哪些细节不该被放进黑料正能量内容</h3>
+          <p>住址、工作单位、家庭成员等与事件无关的信息，一旦扩散就很难收回。本页整理了一份可对照的删减清单。</p>
+          <a class="more" href="#boundary">查看处理原则 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="post" data-cat="反转">
+          <div class="meta"><span class="tag">反转</span><time>后续进展</time></div>
+          <h3>道歉信里的具体动作，比措辞更重要</h3>
+          <p>判断一次道歉是否有分量，看它有没有承认具体行为、有没有给出补救方式。黑料正能量把这些可检验的部分单独列出。</p>
+          <a class="more" href="#faq">看常见疑问 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="post" data-cat="回应">
+          <div class="meta"><span class="tag">回应</span><time>多方说法</time></div>
+          <h3>三方说法并列，差异点在哪里</h3>
+          <p>爆料者、当事人与平台处置各自表述不同。把三者放在同一张时间轴上，重叠与矛盾之处就一目了然。</p>
+          <a class="more" href="#observe">用溯源方法看 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <article class="post" data-cat="边界">
+          <div class="meta"><span class="tag">边界</span><time>阅读提醒</time></div>
+          <h3>转发之前，先问自己三个问题</h3>
+          <p>来源是否可查、时间是否完整、是否涉及无关个人信息。三个问题都过了，再决定要不要让这条黑料正能量内容继续传播。</p>
+          <a class="more" href="#boundary">查看完整清单 <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </article>
+        <p class="empty-note" id="emptyNote" hidden>没有匹配的看点，换个关键词或选择“全部”再看看。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block" id="faq" style="padding-top:0;">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">FAQ</span>
+        <h2>关于黑料正能量的常见疑问</h2>
+        <p>访问者最常问的四个问题，答案直接写在这里，不需要再跳转。</p>
+      </div>
+      <div class="faq">
+        <details class="q" open>
+          <summary>黑料正能量是替谁说话的吗？</summary>
+          <p>不是。页面把公开说法与可核对细节并列呈现，标注来源性质，对未证实内容保留“待核实”状态。它更像一份阅读笔记，而不是某一方的立场声明。</p>
+        </details>
+        <details class="q">
+          <summary>为什么叫正能量，却还在聊黑料？</summary>
+          <p>因为爆料语境里也有正向的部分：有人澄清、有人道歉、有规则被补上。黑料正能量关注的是热闹之后留下的这些变化，而不是把争议反复放大。</p>
+        </details>
+        <details class="q">
+          <summary>页面里的看点会持续更新吗？</summary>
+          <p>看点区按主题分类并支持搜索，条目会随事件进展调整。已经发生反转的内容会保留修改痕迹，方便对照前后判断的差别。</p>
+        </details>
+        <details class="q">
+          <summary>发现内容有误，可以反馈吗？</summary>
+          <p>可以。反馈时请附上可公开查证的来源与时间，页面会据此复核。涉及无关个人信息的内容，会优先处理并删减。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载条 -->
+  <section class="block" style="padding-top:0;">
+    <div class="wrap">
+      <div class="dl-strip">
+        <div>
+          <h2>把这份阅读清单带走</h2>
+          <p>整理好的黑料正能量内容自查清单，包含来源核对、时间线梳理与边界取舍三部分，方便在手机或电脑上随时对照。</p>
+        </div>
+        <a class="dl-btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 42c5-16 23-16 28 0" stroke="#f0b429" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="32" cy="22" r="7" fill="#e2553b"/>
+            </svg>
+          </span>
+          黑料正能量
+        </div>
+        <p>一个围绕网络热点事件与正向表达的观察首页。把事实、回应与边界放在一起看，让黑料正能量讨论回到可核对的信息上。</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>内容</h4>
+          <ul>
+            <li><a href="#observe">事件观察</a></li>
+            <li><a href="#feed">今日看点</a></li>
+            <li><a href="#boundary">内容边界</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>帮助</h4>
+          <ul>
+            <li><a href="#faq">常见疑问</a></li>
+            <li><a href="#top">回到顶部</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>黑料正能量 · 热点观察与正向表达</span>
+      <span>页面内容以公开可查表述为基础，未证实部分标注待核实。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var chips = document.querySelectorAll('.chip');
+  var posts = Array.prototype.slice.call(document.querySelectorAll('#feedList .post'));
+  var search = document.getElementById('feedSearch');
+  var empty = document.getElementById('emptyNote');
+  var activeCat = 'all';
+
+  function apply(){
+    var kw = (search.value || '').trim().toLowerCase();
+    var shown = 0;
+    posts.forEach(function(p){
+      var catOk = activeCat === 'all' || p.getAttribute('data-cat') === activeCat;
+      var text = p.textContent.toLowerCase();
+      var kwOk = !kw || text.indexOf(kw) !== -1;
+      var ok = catOk && kwOk;
+      p.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    empty.hidden = shown !== 0;
+  }
+
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('active'); });
+      c.classList.add('active');
+      activeCat = c.getAttribute('data-filter');
+      apply();
+    });
+  });
+
+  search.addEventListener('input', apply);
+})();
+</script>
+
+</body>
+                                                                                                            </html>
