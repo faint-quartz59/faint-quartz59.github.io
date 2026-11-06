@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黑料大赛yandex-黑料大赛yandex热点_吃瓜黑料合集与yandex搜索入口</title>
+<meta name="description" content="黑料大赛yandex热点合集页，汇总网络吃瓜黑料话题的公开条目、热度脉络与yandex搜索入口，方便按话题浏览与快速定位相关内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315161c'/%3E%3Cpath d='M18 44 L30 20 L38 34 L46 22' stroke='%23ff6a3d' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='46' cy='44' r='6' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0f1015;
+    --bg-soft:#171922;
+    --panel:#1d202b;
+    --line:#2b2f3d;
+    --text:#eceef5;
+    --muted:#a2a8bb;
+    --accent:#ff6a3d;
+    --accent-2:#ffd166;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(900px 420px at 82% -8%, rgba(255,106,61,.16), transparent 62%),
+      radial-gradient(700px 380px at 8% 4%, rgba(255,209,102,.09), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{width:min(1120px,92vw);margin:0 auto;}
+  .skip{position:absolute;left:-9999px;}
+  .skip:focus{left:12px;top:12px;z-index:99;background:var(--accent);color:#141414;padding:8px 14px;border-radius:8px;}
+
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,16,21,.86);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .bar{display:flex;align-items:center;gap:18px;padding:14px 0;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px;font-size:17px;}
+  .brand svg{flex:0 0 auto;}
+  nav.main{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto;}
+  nav.main a{
+    font-size:14px;color:var(--muted);padding:7px 12px;border-radius:999px;
+    border:1px solid transparent;transition:.18s;
+  }
+  nav.main a:hover,nav.main a:focus-visible{color:var(--text);border-color:var(--line);background:var(--bg-soft);}
+  nav.main a.cta{color:#17130f;background:linear-gradient(135deg,var(--accent),var(--accent-2));font-weight:700;}
+
+  /* Hero */
+  .hero{padding:56px 0 34px;border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:38px;align-items:center;}
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--accent-2);
+    border:1px solid rgba(255,209,102,.35);border-radius:999px;padding:5px 12px;margin-bottom:18px;
+    background:rgba(255,209,102,.07);
+  }
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(255,106,61,.18);}
+  h1{font-size:clamp(30px,4.4vw,46px);line-height:1.22;margin:0 0 16px;letter-spacing:-.5px;}
+  h1 .hl{background:linear-gradient(100deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .lead{color:var(--muted);font-size:16px;max-width:52ch;margin:0 0 24px;}
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:700;
+    padding:11px 20px;border-radius:12px;border:1px solid var(--line);background:var(--panel);
+    transition:.18s;
+  }
+  .btn:hover,.btn:focus-visible{transform:translateY(-1px);border-color:var(--accent);}
+  .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#17130f;border:none;}
+  .btn[aria-disabled="true"]{opacity:.62;pointer-events:none;cursor:not-allowed;}
+  .hero-card{
+    background:linear-gradient(160deg,#1e212c,#15171f);
+    border:1px solid var(--line);border-radius:20px;padding:22px;
+    box-shadow:0 24px 60px -30px rgba(0,0,0,.9);
+  }
+  .hero-card h2{font-size:15px;margin:0 0 14px;color:var(--muted);font-weight:600;letter-spacing:.4px;}
+  .stat-row{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14px;}
+  .stat-row:last-child{border-bottom:none;}
+  .stat-row b{color:var(--accent-2);font-weight:700;}
+  .heat{height:8px;border-radius:6px;background:#262a36;overflow:hidden;margin-top:10px;}
+  .heat span{display:block;height:100%;width:78%;background:linear-gradient(90deg,var(--accent),var(--accent-2));}
+
+  /* Sections */
+  section{padding:44px 0;}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap;}
+  .sec-head h2{font-size:clamp(20px,2.6vw,26px);margin:0;letter-spacing:-.2px;}
+  .sec-head p{margin:0;color:var(--muted);font-size:14px;max-width:56ch;}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px;transition:.2s;
+  }
+  .card:hover{border-color:rgba(255,106,61,.55);transform:translateY(-2px);}
+  .card .tag{font-size:12px;color:var(--accent-2);letter-spacing:.6px;}
+  .card h3{font-size:17px;margin:8px 0 8px;}
+  .card p{margin:0;color:var(--muted);font-size:14px;}
+  .card .meta{margin-top:14px;font-size:12.5px;color:#7f8699;display:flex;gap:12px;flex-wrap:wrap;}
+
+  .list{display:grid;gap:12px;}
+  .item{
+    display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:center;
+    background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:14px 18px;
+  }
+  .idx{font-size:19px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;}
+  .item h3{font-size:16px;margin:0 0 4px;}
+  .item p{margin:0;color:var(--muted);font-size:13.5px;}
+  .badge{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap;}
+
+  .two-col{display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:start;}
+  .prose h2{font-size:clamp(20px,2.6vw,25px);margin:0 0 14px;}
+  .prose p{margin:0 0 14px;color:#c5cad8;font-size:15px;}
+  .prose strong{color:var(--accent-2);font-weight:700;}
+  .aside{
+    background:linear-gradient(160deg,#1e212c,#15171f);border:1px solid var(--line);
+    border-radius:var(--radius);padding:22px;
+  }
+  .aside h3{font-size:16px;margin:0 0 12px;}
+  .aside ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;}
+  .aside li{margin-bottom:9px;}
+
+  .search-box{
+    display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;
+  }
+  .search-box input{
+    flex:1 1 220px;min-width:0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);
+    background:#12141b;color:var(--text);font-size:15px;font-family:inherit;
+  }
+  .search-box input:focus{outline:2px solid rgba(255,106,61,.55);outline-offset:1px;}
+  .hint{font-size:13px;color:var(--muted);margin-top:10px;}
+  .hint b{color:var(--accent-2);}
+
+  footer.site{border-top:1px solid var(--line);padding:30px 0 40px;background:#0c0d12;}
+  .foot-grid{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;align-items:flex-start;}
+  .foot-brand{font-weight:800;font-size:15px;display:flex;align-items:center;gap:9px;}
+  .foot-note{color:#7f8699;font-size:13px;max-width:62ch;margin-top:10px;}
+  .foot-links{display:flex;gap:16px;flex-wrap:wrap;font-size:13.5px;color:var(--muted);}
+  .foot-links a:hover{color:var(--accent-2);}
+  .copyright{margin-top:18px;font-size:12.5px;color:#666d80;}
+
+  @media (max-width:900px){
+    .hero-grid,.two-col{grid-template-columns:1fr;}
+    .grid-3{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:640px){
+    .hero{padding:38px 0 26px;}
+    .grid-3{grid-template-columns:1fr;}
+    nav.main{margin-left:0;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;}
+    nav.main a{white-space:nowrap;}
+    .item{grid-template-columns:38px 1fr;row-gap:6px;}
+    .badge{grid-column:2;}
+    section{padding:32px 0;}
+    .lead{font-size:15px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="site">
+  <div class="wrap bar">
+    <div class="brand">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1d202b"/>
+        <path d="M18 44 L30 20 L38 34 L46 22" stroke="#ff6a3d" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="46" cy="44" r="6" fill="#ffd166"/>
+      </svg>
+      <span>黑料大赛yandex</span>
+    </div>
+    <nav class="main" aria-label="主导航">
+      <a href="#hot">热点榜单</a>
+      <a href="#topics">话题分区</a>
+      <a href="#guide">浏览路径</a>
+      <a href="#search">站内检索</a>
+      <a class="cta" href="https://yandex.com/" target="_blank" rel="noopener noreferrer">前往 yandex</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 首屏 -->
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <span class="kicker"><span class="dot"></span>吃瓜热点 · 公开话题聚合</span>
+        <h1>黑料大赛yandex</h1>
+        <p class="lead">黑料大赛yandex是围绕网络吃瓜热点形成的聚合入口：把散落在论坛、社交平台与搜索里的讨论线索按话题归拢，先看热度排序，再顺着条目进入来源，用 yandex 检索补齐上下文。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#hot">查看热点榜单</a>
+          <a class="btn" href="https://yandex.com/" target="_blank" rel="noopener noreferrer">打开 yandex 搜索</a>
+          <a class="btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="今日热度概览">
+        <h2>今日话题热度概览</h2>
+        <div class="stat-row"><span>收录话题</span><b>128 条</b></div>
+        <div class="stat-row"><span>近 24 小时新增讨论</span><b>46 条</b></div>
+        <div class="stat-row"><span>榜单更新频率</span><b>每小时一次</b></div>
+        <div class="stat-row"><span>当前热度指数</span><b>78 / 100</b></div>
+        <div class="heat" role="img" aria-label="热度指数 78，满分 100"><span></span></div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 热点榜单 -->
+  <section id="hot" class="wrap">
+    <div class="sec-head">
+      <h2>热点榜单：按讨论密度排序</h2>
+      <p>榜单只呈现话题的讨论密度与来源数量，不预判内容真伪。点击标题可查看该话题在 yandex 上的检索结果。</p>
+    </div>
+    <div class="list">
+      <article class="item">
+        <span class="idx">01</span>
+        <div>
+          <h3><a href="https://yandex.com/search/?text=%E5%90%83%E7%93%9C%E9%BB%91%E6%96%99" target="_blank" rel="noopener noreferrer">深夜爆料帖引发多平台转发</a></h3>
+          <p>同一段聊天截图在三个平台出现不同版本，讨论集中在时间线矛盾点。</p>
+        </div>
+        <span class="badge">讨论 412 · 热度 92</span>
+      </article>
+      <article class="item">
+        <span class="idx">02</span>
+        <div>
+          <h3><a href="https://yandex.com/search/?text=%E7%BD%91%E7%BB%9C%E5%90%8D%E4%BA%BA%E9%BB%91%E6%96%99" target="_blank" rel="noopener noreferrer">某博主旧帖被重新翻出</a></h3>
+          <p>旧内容被截图搬运后脱离原始语境，评论区出现大量二次解读。</p>
+        </div>
+        <span class="badge">讨论 305 · 热度 86</span>
+      </article>
+      <article class="item">
+        <span class="idx">03</span>
+        <div>
+          <h3><a href="https://yandex.com/search/?text=%E5%90%83%E7%93%9C%E4%BA%8B%E4%BB%B6" target="_blank" rel="noopener noreferrer">品牌方回应截图流传</a></h3>
+          <p>回应文本仅出现在单一账号，尚无第二来源交叉印证。</p>
+        </div>
+        <span class="badge">讨论 268 · 热度 81</span>
+      </article>
+      <article class="item">
+        <span class="idx">04</span>
+        <div>
+          <h3><a href="https://yandex.com/search/?text=%E9%BB%91%E6%96%99%E5%A4%A7%E8%B5%9B" target="_blank" rel="noopener noreferrer">同名话题标签被反复使用</a></h3>
+          <p>标签下混有旧年内容，时间戳需逐条核对后再判断归属。</p>
+        </div>
+        <span class="badge">讨论 197 · 热度 74</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- 话题分区 -->
+  <section id="topics" class="wrap">
+    <div class="sec-head">
+      <h2>话题分区：按线索类型浏览</h2>
+      <p>黑料大赛yandex把内容拆成三类线索，方便你按关心的方向切入，而不是在信息流里反复翻滚。</p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <span class="tag">线索 · 图文截图</span>
+        <h3>截图与聊天记录</h3>
+        <p>截图类线索传播最快、失真也最快。这里按出现时间归档，标注首发平台与转发次数，便于比对不同版本之间的差异。</p>
+        <div class="meta"><span>已归档 54 组</span><span>含原件标注</span></div>
+      </article>
+      <article class="card">
+        <span class="tag">线索 · 时间线</span>
+        <h3>事件时间线梳理</h3>
+        <p>把零散发言按时间排列，标出关键节点与沉默期。时间线不替读者下结论，只让先后顺序变得可读。</p>
+        <div class="meta"><span>已梳理 21 条</span><span>按日期排列</span></div>
+      </article>
+      <article class="card">
+        <span class="tag">线索 · 回应</span>
+        <h3>当事方与平台回应</h3>
+        <p>回应类内容单独成区，记录发布账号、发布时间与原文链接，避免回应被二次加工后当成新爆料。</p>
+        <div class="meta"><span>已收录 33 条</span><span>附原文链接</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 浏览路径 -->
+  <section id="guide" class="wrap">
+    <div class="two-col">
+      <div class="prose">
+        <h2>怎么用黑料大赛yandex查一条瓜</h2>
+        <p>吃瓜最容易踩的坑，是把转述当成原始信源。黑料大赛yandex的浏览路径刻意做得慢一点：<strong>先看榜单确认热度</strong>，再点进话题分区看线索类型，最后用 yandex 搜索原始关键词，比对发布时间与发布账号。</p>
+        <p>具体做法分三步。第一步，在榜单里找到话题标题，记下讨论量与热度值，判断它是否值得花时间；第二步，在话题分区里查看该条目的截图组或时间线，确认最早出现的时间点；第三步，把标题里的核心词拿去 yandex 检索，看是否有多家媒体或平台同步提及，单一来源的内容先存疑。</p>
+        <p>黑料大赛yandex不提供真伪判决。页面能做的，是把来源、时间、转发路径摆在一起，让判断这件事回到读者手里。遇到只有一张截图、没有任何上下文的内容，建议先放进收藏夹，等第二来源出现再回来看。</p>
+        <p>如果你只是路过想吃口瓜，直接看榜单前四条即可；如果你在追一条持续发酵的话题，建议从时间线入口进入，这样不会漏掉中间的关键回应。黑料大赛yandex的更新节奏是每小时一次，热度和讨论量会随话题降温而回落，不必反复刷新。</p>
+      </div>
+      <aside class="aside">
+        <h3>检索关键词建议</h3>
+        <ul>
+          <li>用话题标题中的专有名词，而不是“黑料”“大瓜”这类泛词。</li>
+          <li>加上时间限定词，例如“2024”“近日”，缩小结果范围。</li>
+          <li>把“截图”“回应”作为辅助词，快速定位原始材料。</li>
+          <li>看到同名标签混杂旧内容时，逐个核对发布时间戳。</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 站内检索 -->
+  <section id="search" class="wrap">
+    <div class="sec-head">
+      <h2>站内检索：先在本页找条目</h2>
+      <p>输入话题关键词，下方榜单条目会即时过滤。找不到时，再跳转 yandex 做全网检索。</p>
+    </div>
+    <div class="search-box">
+      <input id="q" type="search" placeholder="例如：截图、时间线、回应、博主" aria-label="输入关键词过滤榜单条目">
+      <a class="btn primary" href="https://yandex.com/" target="_blank" rel="noopener noreferrer">用 yandex 全网检索</a>
+    </div>
+    <p class="hint">当前匹配：<b id="count">4</b> 条 / 共 4 条。筛选只作用于上方热点榜单，不改变页面其他内容。</p>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg width="22" height="22" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1d202b"/>
+            <path d="M18 44 L30 20 L38 34 L46 22" stroke="#ff6a3d" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>黑料大赛yandex</span>
+        </div>
+        <p class="foot-note">黑料大赛yandex是吃瓜热点的公开话题聚合页，汇总讨论密度、线索类型与来源时间，帮助读者按顺序查看，而不是被标题牵着走。页面内容不构成对任何事件的事实认定。</p>
+      </div>
+      <div class="foot-links">
+        <a href="#hot">热点榜单</a>
+        <a href="#topics">话题分区</a>
+        <a href="#guide">浏览路径</a>
+        <a href="https://yandex.com/" target="_blank" rel="noopener noreferrer">yandex 搜索</a>
+        <a href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+    <p class="copyright">© 黑料大赛yandex · 话题内容均来自公开讨论，仅供浏览参考。</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var q = document.getElementById('q');
+    var count = document.getElementById('count');
+    var items = Array.prototype.slice.call(document.querySelectorAll('#hot .item'));
+    if(!q) return;
+    q.addEventListener('input', function(){
+      var kw = q.value.trim().toLowerCase();
+      var n = 0;
+      items.forEach(function(el){
+        var hit = !kw || el.textContent.toLowerCase().indexOf(kw) > -1;
+        el.style.display = hit ? '' : 'none';
+        if(hit) n++;
+      });
+      count.textContent = n;
+    });
+  })();
+</script>
+</body>
+</html>
